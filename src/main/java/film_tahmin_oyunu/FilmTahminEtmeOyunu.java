@@ -1,26 +1,36 @@
 package film_tahmin_oyunu;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class FilmTahminEtmeOyunu {
 
+    static         List<String> film = new ArrayList<>(Arrays.asList("KELEBEK", "MUCIZE", "AYLA", "DUNKIRK", "MEMENTO", "GORA", "ESKIYA",
+            "FIGHTCLUB", "KARAKOMIK", "KILLBILL", "AMELIE", "XMEN", "OLDBOY",
+            "BATMAN", "KELOGLAN", "TOYSTORY", "MUTLULUK", "SEVEN"));
+
     public static void main(String[] args) {
 
-        List<String> film = new ArrayList<>(Arrays.asList("KELEBEK", "MUCIZE", "AYLA", "DUNKIRK", "MEMENTO", "GORA", "ESKIYA",
-                "FIGHTCLUB", "KARAKOMIK", "KILLBILL", "AMELIE", "XMEN", "OLDBOY",
-                "BATMAN", "KELOGLAN", "TOYSTORY", "MUTLULUK", "SEVEN"));
-
-
-        Scanner input = new Scanner(System.in);
-        System.out.println("film secmek icin 0'dan 17'ye kadar bir sayi girin");
-        int secim = input.nextInt();
-
-        filmSec(film.get(secim));
+        secim();
 
     }
+    public static void secim(){
+
+
+        while(true){
+            int r = (int)(Math.random()*18);
+            System.out.println("\nOYUN BASLIYOR!...");
+            filmSec(film.get(r));
+            System.out.println("Oyundan Cikmak icin 0'a\nDevam etmek icin herhangi bir tusa basin");
+            Scanner input = new Scanner(System.in);
+            if(input.next().equals("0")){
+                System.out.println("TEKRAR GORUSURUZ..");
+                break;
+            }
+        }
+
+    }
+
+
 
     public static void filmSec(String str){
 
@@ -54,7 +64,8 @@ public class FilmTahminEtmeOyunu {
 
                 while(str.contains(c)){
                     tahminList.set(str.indexOf(c), c);
-                    str= str.replaceFirst(c, "*");
+
+                    str= str.replaceFirst(c, "P");
                 }
 
                 System.out.println(tahminList);

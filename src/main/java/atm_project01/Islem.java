@@ -37,15 +37,13 @@ public class Islem {
             default:
                 System.out.println("Cikis yapmak icin 6'ya basiniz");
                 islemler();
-
-
-
-
+                break;
 
         }
 
 
     }
+
 
     public static void bakiyeSorgulama(int x) {
         System.out.println("Bakiye= " + list1.get(no - 1).getBakiye());
@@ -125,16 +123,16 @@ public class Islem {
             String yeniSifre = input.next();
             list1.get(no - 1).setSifre(yeniSifre);
             System.out.println("Yeni sifreniz " + list1.get(no - 1).getSifre() + " olarak onaylandi\n");
+            System.out.println("Ana menuye donmek icin herhangi bir tusa basin");
+            input.next();
             islemler();
         } else {
-            System.out.println("Sifre hatali");
+            System.out.println("Sifre hatali\tTekrar Deneyiniz..");
             islemler();
 
         }
 
-        System.out.println("Ana menuye donmek icin herhangi bir tusa basin");
-        input.next();
-        islemler();
+
 
 
     }

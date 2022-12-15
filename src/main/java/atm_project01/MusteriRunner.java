@@ -22,9 +22,14 @@ public class MusteriRunner {
 
     public static void main(String[] args) {
 
-        musterilist((list1), musteri("Mustafa DAG", "1234", "7777",100.00), musteri("Ayhan GULER", "3698", "8888",10.00), musteri("tacettin demir", "4633", "1452", 50.00));
+                musterilist((list1), musteri("Mustafa DAG", "1234", "7777",100.00),
+                        musteri("Ayhan GULER", "3698", "8888",10.00),
+                        musteri("Tacettin Demir", "4633", "1452", 50.00),
+                        musteri("Zeynep", "1111", "1453", 25));
 
         hangiMusteri();
+
+
 
 
 
@@ -39,6 +44,7 @@ public class MusteriRunner {
     }
 
     public static MusteriBilgileri musteri(String ad, String kartNo, String sifre, double bakiye){
+
 
         return new MusteriBilgileri(ad, kartNo, sifre, bakiye);
     }
