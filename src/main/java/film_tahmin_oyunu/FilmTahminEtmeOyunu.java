@@ -92,6 +92,8 @@ public class FilmTahminEtmeOyunu {
             if (ft.equalsIgnoreCase(d)) {
                 System.out.println("TEBRIKLER!!");
                 break;
+            }else{
+                System.out.println("Yanlis Tahmin");
             }
 
 
