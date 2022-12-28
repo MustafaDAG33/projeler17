@@ -34,7 +34,7 @@ public class FilmTahminEtmeOyunu {
 
     public static void filmSec(String str){
 
-        String d = str;//kullanicinin girdigi index'e karsilik gelen film
+        String d = str;
 
         List<String> tahminList = new ArrayList<>(str.length());//filmin kac harfli oldugunu gosteren bos list
         for (int i = 0; i < str.length(); i++) {
@@ -61,48 +61,54 @@ public class FilmTahminEtmeOyunu {
 
             if(str.contains(c)){
                 dogruTahmin++;
-
+                int idx=0;
                 while(str.contains(c)){
+                    idx++;
                     tahminList.set(str.indexOf(c), c);
 
                     str= str.replaceFirst(c, "P");
                 }
 
                 System.out.println(tahminList);
-                System.out.println("Dogru Tahmin = " + dogruTahmin);
-                System.out.println("Yanlis Tahmin = " + yanlisTahmin+ "\n");
+                System.out.println("BINGOO!! --> "  + c + "  harfi " + idx + " tane bulundu");
 
             }else{
                 yanlisTahmin++;
-                System.out.println("Dogru Tahmin = " + dogruTahmin);
-                System.out.println("Yanlis Tahmin = " + yanlisTahmin+ "\n");
+                System.out.println(c + " harfi yok maalesef");
+
             }
 
             if(j.equals(tahminList)){
-                System.out.println("TEBRIKLER!");
+                System.out.println("BRAVOO!");
+                System.out.println(dogruTahmin + " defa harf alarak oyunu kazandinn..");
+                System.out.println("---------------------------------");
                 break;
             }
 
 
             Scanner scan = new Scanner(System.in);
-            System.out.println("Filmi tahmin et");
+            System.out.println("Filmi tahmin edebilir misin?");
             String ft = scan.nextLine();
 
 
             if (ft.equalsIgnoreCase(d)) {
-                System.out.println("TEBRIKLER!!");
+                System.out.println("BRAVOO!!");
+                System.out.println(dogruTahmin + " defa harf alarak oyunu kazandinn..");
+                System.out.println("-------------------------------");
                 break;
             }else{
-                System.out.println("Yanlis Tahmin");
+                System.out.println("Devam et!!");
             }
 
 
             tahminHakki--;
-            System.out.println("kalan tahmin hakkiniz : " + tahminHakki);
+            System.out.println("kalan tahmin hakkin : " + tahminHakki);
 
             if(tahminHakki==0){
                 System.out.println("KAYBETTINIZ");
                 System.out.println("FILM : " + d);
+                System.out.println(dogruTahmin + " defa harf alarak oyunu kazandinn..");
+                System.out.println("----------------------------");
                 break;
 
             }
