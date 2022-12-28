@@ -80,7 +80,7 @@ public class FilmTahminEtmeOyunu {
 
             if(j.equals(tahminList)){
                 System.out.println("BRAVOO!");
-                System.out.println(dogruTahmin + " defa harf alarak oyunu kazandinn..");
+                System.out.println(dogruTahmin+" dogru\n" +yanlisTahmin+" yanlis\n"+ "  harf alarak oyunu kazandinn..");
                 System.out.println("---------------------------------");
                 break;
             }
@@ -93,7 +93,7 @@ public class FilmTahminEtmeOyunu {
 
             if (ft.equalsIgnoreCase(d)) {
                 System.out.println("BRAVOO!!");
-                System.out.println(dogruTahmin + " defa harf alarak oyunu kazandinn..");
+                System.out.println(dogruTahmin+" dogru\n" +yanlisTahmin+" yanlis\n"+ "  harf alarak oyunu kazandinn..");
                 System.out.println("-------------------------------");
                 break;
             }else{
@@ -107,7 +107,7 @@ public class FilmTahminEtmeOyunu {
             if(tahminHakki==0){
                 System.out.println("KAYBETTINIZ");
                 System.out.println("FILM : " + d);
-                System.out.println(dogruTahmin + " defa harf alarak oyunu kazandinn..");
+                System.out.println(dogruTahmin+" dogru\n" +yanlisTahmin+" yanlis\n"+ "  harf alarak oyunu kazandinn..");
                 System.out.println("----------------------------");
                 break;
 
